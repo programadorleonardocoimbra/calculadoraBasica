@@ -53,11 +53,34 @@ public class calculadoraBasica {
             
             // O programa realizará a operação de divisão:
             case 4:
+              
+            //Comando para evitar divisão por zero.
+            if (numero2 != 0) {  
                 resultado = numero1 / numero2;
                 System.out.println("Resultado:" + resultado);
             break;
-        
-        }
+          
+            // Mensagem de erro caso o usuário tente dividir por zero.
+        }   else{
+            System.out.println("Erro: Divisão por zero não é permitida.");
 
-    }
+        }
+        // Freiar os recursos do scanner.
+        break;
+
+        // Caso o usuário digite uma opção inválida, o programa exibirá uma mensagem de erro.
+        default:
+           System.out.println("Opção inválida. ");
+
+
+      }
+        
+        // Fechar os recursos do scanner.
+        scanner.close();
+
+       
+      }
+
+
+      
     }
